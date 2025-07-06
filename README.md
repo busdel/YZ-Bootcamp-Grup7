@@ -79,3 +79,52 @@ Modüler ve ölçeklenebilir altyapısıyla, ilerleyen aşamalarda diyabet, KOAH
 
 ## Product Backlog URL  
 [Trello Board - Sprint 1](https://trello.com/b/4gxOOOXD/hearthelper-sprint-1)
+
+
+---
+
+# Sprint 1 
+- Sprint içinde tamamlanması tahmin edilen puan: 35 Puan
+
+- Puan tamamlama mantığı: Toplamda proje boyunca tamamlanması gereken 100 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 35 ile başlaması gerektiğine karar verildi.
+
+- Daily Scrum: Daily Scrum toplantılarının zamansal sebeplerden ötürü Whatsapp üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği odt olarak Readme'de tarafımızdan paylaşılmaktadır:
+
+
+- Sprint board update: Sprint board screenshotları:
+  
+  ![image](https://github.com/user-attachments/assets/70c02504-080f-42f9-b093-a6c0280914d7)
+
+  ![image](https://github.com/user-attachments/assets/cdaa7ec4-adca-4441-9cec-d9be96b1d219)
+
+- Ürün Durumu: Ekran görüntüleri:
+  
+  ![image](https://github.com/user-attachments/assets/c82ee1b4-0855-408d-b780-842b232990c3)
+
+- Sprint Review:
+
+- ✅ Veri seti seçildi  
+- ✅ Chatbot kullanıcı akışı Miro üzerinde oluşturuldu  
+- ✅ PDF/Web içerik yükleme ve metin parçalayıcı modül geliştirildi  
+- ✅ Google API ile embedding üretildi  
+- ✅ FAISS indeksleme ve kayıt/yükleme fonksiyonları tamamlandı  
+
+> Toplam 35 SP planlandı ve başarıyla tamamlandı.  
+> Proje altyapısı Sprint 2’ye hazır.
+- Sprint Review katılımcıları: Neslişah Ebral Durdu,Sıla Carus,Büşranur Delice,Ozan İnaltekin,Yavuz Selim Özdemir 
+
+- Sprint Retrospective:
+
+  - Takım içindeki görev dağılımıyla ilgili düzenleme yapılması kararı alınmıştır.
+  - Takım üyelerinin gelecek sprintlerde panoyu daha aktif kullanması gerektiğine vurgu yapılmıştır.
+
+---
+
+## Product Backlog URL  
+[Trello Board - Sprint 1](https://trello.com/b/4gxOOOXD/hearthelper-sprint-1)
+
+
+
+
+
+
