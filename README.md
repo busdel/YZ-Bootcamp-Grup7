@@ -105,7 +105,7 @@ Modüler ve ölçeklenebilir altyapısıyla, ilerleyen aşamalarda diyabet, KOAH
 - Sprint Review:
 
 - ✅ Veri seti seçildi  
-- ✅ Chatbot kullanıcı akışı Miro üzerinde oluşturuldu  
+- ✅ Chatbot kullanıcı akışı Trello üzerinde oluşturuldu  
 - ✅ PDF/Web içerik yükleme ve metin parçalayıcı modül geliştirildi  
 - ✅ Google API ile embedding üretildi  
 - ✅ FAISS indeksleme ve kayıt/yükleme fonksiyonları tamamlandı  
