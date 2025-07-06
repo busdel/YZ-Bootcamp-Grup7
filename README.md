@@ -88,7 +88,7 @@ Modüler ve ölçeklenebilir altyapısıyla, ilerleyen aşamalarda diyabet, KOAH
 
 - Puan tamamlama mantığı: Toplamda proje boyunca tamamlanması gereken 100 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 35 ile başlaması gerektiğine karar verildi.
 
-- Daily Scrum: Daily Scrum toplantılarının zamansal sebeplerden ötürü Whatsapp üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği odt olarak Readme'de tarafımızdan paylaşılmaktadır:
+- Daily Scrum: Daily Scrum toplantılarının zamansal sebeplerden ötürü Whatsapp üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği odt olarak Readme'de tarafımızdan paylaşılmaktadır:[📄 Sprint 1 Daily Scrum Chats](https://github.com/busdel/YZ-Bootcamp-Grup7/raw/main/sprint%201%20daily%20scrum%20chats.odt)
 
 
 - Sprint board update: Sprint board screenshotları:
