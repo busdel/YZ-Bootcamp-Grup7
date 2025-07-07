@@ -126,7 +126,7 @@ geliştirilebilir.
 
   - Takım içindeki görev dağılımıyla ilgili düzenleme yapılması kararı alınmıştır.
   - Takım üyelerinin gelecek sprintlerde panoyu daha aktif kullanması gerektiğine vurgu yapılmıştır.
-  - 2. sprintte kullanıcıdan doğal dilde soru alma arayüzü yapılmasına karar verildi.
+  - İkinci sprintte kullanıcıdan doğal dilde soru alma arayüzü yapılmasına karar verildi.
   - Soru için embedding üretme ve FAISS ile en yakın içerikleri bulmaya karar verildi.
   - Gemini LLM (örneğin gemini-pro) ile prompt oluşturma ve yanıt üretilmeye karar verildi.
   - Yanıtların kullanıcıya sunulmasına karar verildi. (streamlit veya terminal tabanlı)
