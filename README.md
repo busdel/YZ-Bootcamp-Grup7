@@ -130,6 +130,7 @@ geliştirilebilir.
   - Soru için embedding üretme ve FAISS ile en yakın içerikleri bulmaya karar verildi.
   - Gemini LLM (örneğin gemini-pro) ile prompt oluşturma ve yanıt üretilmeye karar verildi.
   - Yanıtların kullanıcıya sunulmasına karar verildi. (streamlit veya terminal tabanlı)
+  - Test ve doğruluk kontrolü yapılmaya karar verildi.
 
 ---
 
