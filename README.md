@@ -88,7 +88,7 @@ Modüler ve ölçeklenebilir altyapısıyla, ilerleyen aşamalarda diyabet, KOAH
 
 - Proje yönetim aracı olarak Trello kullanılmasına karar verildi.
 
-- Puan tamamlama mantığı: Toplamda proje boyunca tamamlanması gereken 100 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 35 ile başlaması gerektiğine karar verildi.
+- Puan tamamlama mantığı: Toplamda proje boyunca tamamlanması gereken ortalama 100 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 35 ile başlaması gerektiğine karar verildi. 1. sprintte Bilgi Tabanı Oluşturulacağı için 35 puan hedeflenmiştir, 2. sprintte Soru-Cevap Modülü hazırlanacağından 25-30 puan, 3. sprintte Uygulama Arayüzü ve Yayına Hazırlık süreçleri olacağı için 25-35 puanlama arası hedef konulmuştur.
 
 - Daily Scrum: Daily Scrum toplantılarının zamansal sebeplerden ötürü Whatsapp üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği odt olarak Readme'de tarafımızdan paylaşılmaktadır: 
  [📄 Sprint 1 Daily Scrum Chats ](https://github.com/busdel/YZ-Bootcamp-Grup7/raw/main/sprint%201%20daily%20scrum%20chats.odt)
