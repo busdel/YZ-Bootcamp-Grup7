@@ -110,7 +110,13 @@ Modüler ve ölçeklenebilir altyapısıyla, ilerleyen aşamalarda diyabet, KOAH
 - ✅ Chatbot kullanıcı akışı Trello üzerinde oluşturuldu  
 - ✅ PDF/Web içerik yükleme ve metin parçalayıcı modül geliştirildi  
 - ✅ Google API ile embedding üretildi  
-- ✅ FAISS indeksleme ve kayıt/yükleme fonksiyonları tamamlandı  
+- ✅ FAISS indeksleme ve kayıt/yükleme fonksiyonları tamamlandı
+- ✅ Projemiz için veri arama ve soru-cevap altyapısının en kritik kısmı olan bilgi tabanı
+başarıyla oluşturuldu.
+- ✅ Kodlar ve çıktılar tekrar kullanılabilir; yeni PDF eklenirse süreç kolayca
+tekrarlanabilir.
+- ✅ Sonraki adımda, bu bilgi tabanından akıllı arama veya chatbot uygulamaları
+geliştirilebilir.  
 
 > Toplam 35 SP planlandı ve başarıyla tamamlandı.  
 > Proje altyapısı Sprint 2’ye hazır.
