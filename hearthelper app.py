@@ -10,7 +10,7 @@ from sentence_transformers import SentenceTransformer
 GEMINI_API_KEY = ""  # Ekibin API_Key (kendi API_KEY'inizi girebilirsiniz). 
 
 genai.configure(api_key=GEMINI_API_KEY)
-g_model = genai.GenerativeModel("models/gemini-1.5-pro")  # veya yeni bir model
+g_model = genai.GenerativeModel("models/gemini-1.5-pro")
 
 st.set_page_config(page_title="HeartHelper", page_icon="🫀", layout="wide")
 
