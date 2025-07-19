@@ -134,8 +134,84 @@ geliştirilebilir.
 
 ---
 
-## Product Backlog URL  
-[Trello Board - Sprint 1](https://trello.com/b/4gxOOOXD/hearthelper-sprint-1)
+# Sprint 2
+
+- Sprint Notları:
+
+   -  Doğal dilde soru alabilmek için kullanıcı arayüzü geliştirildi (Streamlit).
+   -  Soru cümlelerinden embedding üretmek için Google Embedding API kullanıldı.
+   -  En alakalı içerikleri bulmak için FAISS vektör arama algoritması kullanıldı.
+   -  Alakalı içeriklerden cevap üretmek için Gemini-Pro LLM entegre edildi.
+   -  Uygulama arayüz tasarımı için Figma kullanıldı.
+   -  Kullanıcıdan yaş, cinsiyet gibi bilgiler almak için giriş formu geliştirildi.
+   -  İngilizce dil desteği sağlamak için çok dilli arayüz desteği eklendi.
+   -  Uygulamanın tanıtımı için kısa bir video hazırlandı (demo).
+   -  Sprint planlama ve günlük scrum toplantıları düzenli olarak yapıldı.
+   -  Trello üzerinden görev paylaşımı yapıldı ve ekip takibi sağlandı.
+
+- Sprint içinde tamamlanması tahmin edilen puan: 33 Puan
+
+- Puan tamamlama mantığı: Toplamda proje boyunca tamamlanması gereken ortalama 100 puanlık backlog bulunmaktadır. 1. sprintte Bilgi Tabanı Oluşturulacağı için 35 puanlık hedef tamamlanmıştır, 2. sprintte Soru-Cevap Modülü hazırlanıp 33 puan tamamlanmıştır, 3. sprintte Uygulama Arayüzü ve Yayına Hazırlık süreçleri ve test süreçleri olacağı için 25-35 puanlama arası hedef konulmuştur.
+
+- Daily Scrum: Daily Scrum toplantılarının zamansal sebeplerden ötürü Whatsapp üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği odt olarak Readme'de tarafımızdan paylaşılmaktadır: 📄 [Sprint 2 Toplantı Notları](https://github.com/busdel/YZ-Bootcamp-Grup7/raw/main/sprint%202%20daily%20scrum%20chats.odt)
+- Product Backlog URL: [Trello Board - Sprint 2](https://trello.com/b/QhBUUi75/hearthelper-sprint-2)
+
+- Sprint board screenshotları:
+  
+  <img width="2938" height="1474" alt="image" src="https://github.com/user-attachments/assets/dda3087b-f73d-4293-baa2-2c95b9824eb8" />
+  
+  <img width="2938" height="1464" alt="image" src="https://github.com/user-attachments/assets/5b013e51-6642-49b5-8267-8f79d80fc83d" />
+  
+  <img width="2934" height="1486" alt="image" src="https://github.com/user-attachments/assets/905e2ba4-ea07-45ef-8301-46d5205d8b1e" />
+
+  
+- Ürün Durumu: Ekran görüntüleri:
+  
+  <img width="2852" height="1616" alt="image" src="https://github.com/user-attachments/assets/1df7e5f1-71e8-4d14-bac7-83aeeb4c5e8b" />
+
+  <img width="2846" height="1619" alt="image" src="https://github.com/user-attachments/assets/43bdf89d-75d2-4d6f-9372-89317c142680" />
+
+- Sprint Review:
+
+  Sprint 2 kapsamında, projemizin temel yapı taşlarından biri olan soru-cevap modülünü işlevsel hale getirmek için çeşitli teknik ve arayüz geliştirmeleri gerçekleştirdik. Bu sprintin ana hedefi, kullanıcının doğal dilde sorduğu sorulara sistemin anlamlı ve bağlamsal olarak doğru yanıtlar üretebilmesini sağlamaktı. Aşağıda sprint boyunca yapılan çalışmalar detaylı şekilde özetlenmiştir:
+
+  - Soru alma ve embedding işlemi: Kullanıcının arayüz üzerinden yönelttiği doğal dildeki sorular, belirlenen bir Google metin embedding modeli ile vektörel forma dönüştürüldü. Bu dönüşüm sayesinde soruların anlamına en yakın içeriklerin bulunabilmesi mümkün hale geldi.
+  
+  - Vektör indeksleme ve arama: FAISS kütüphanesi kullanılarak içerik verileri vektör uzayında indekslendi. Kullanıcının sorusuna en yakın içerikleri hızlı ve etkili şekilde bulmak amacıyla bu yapı kuruldu. FAISS verileri disk üzerine yazıldı ve daha sonra tekrar yüklenebilir olacak şekilde yapılandırıldı.
+  
+  - LLM entegrasyonu: FAISS'ten elde edilen en alakalı içerikler, bir prompt şablonuna yerleştirilerek Google Gemini Pro modeline gönderildi. Bu model, verilen içeriklere göre kullanıcı sorusuna özgün ve anlamlı cevaplar üretti.
+  
+  - İngilizce dil desteği: Uygulamanın farklı kullanıcı profillerine hitap edebilmesi amacıyla İngilizce dil seçeneği eklendi. Giriş ekranında dil tercihi yapılarak, ilgili dilde cevap alınması sağlandı.
+  
+  - Kullanıcı bilgileri: Sistem, kullanıcıdan yaş, cinsiyet ve benzeri temel bilgileri alacak şekilde genişletildi. Bu bilgiler, gelecekte daha kişiselleştirilmiş yanıtlar üretmek için kullanılabilecek altyapının bir parçasını oluşturuyor.
+  
+  - Arayüz tasarımı: Figma kullanılarak kullanıcı arayüzü için modern ve kullanıcı dostu tasarımlar geliştirildi. Arayüz, sade ancak işlevsel olacak şekilde planlandı.
+  
+  - Tanıtım çalışması: Uygulamanın temel işleyişini ve kullanıcı deneyimini yansıtan kısa bir tanıtım videosu hazırlandı.
+  
+  - Scrum süreci: Sprint boyunca günlük Scrum toplantıları düzenli olarak yapıldı. Scrum Master, görev takibini ve ekip koordinasyonunu sağladı. Görevler Trello üzerinden yönetildi ve iş bölümü etkin şekilde yürütüldü.
+ 
+- Sprint Review katılımcıları: Neslişah Ebral Durdu,Sıla Carus,Büşranur Delice,Ozan İnaltekin,Yavuz Selim Özdemir
+
+- Sprint Retrospective:
+  
+  - Uygulamanın deploy sürecinin tamamlanmasına karar verildi.
+  - Logo ve marka bütünlüğü çalışmaları yapılmasına karar verildi.
+  - Test senaryoları hazırlanarak kullanıcı deneyimi odaklı geliştirmeler yapılmasına karar verildi.
+  - İngilizce veri ve PDF dokümanları toplanmasına karar verildi.
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
 
 
