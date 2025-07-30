@@ -8,90 +8,11 @@ import faiss
 from sentence_transformers import SentenceTransformer
 import google.generativeai as genai
 
+st.set_page_config(page_title="HeartHelper", page_icon="hearthelper_logo.png", layout="wide")
+
 # --- Dil Seçimi ve TXT sözlüğü ---
 lang = st.sidebar.selectbox("Select Language / Dil Seçiniz", ["Türkçe", "English"])
 
-TXT = {
-    "Türkçe": {
-        "question_placeholder": "Sorunuzu yazınız...",
-        "ask_button": "Sor",
-        "a": "Cevap",
-        "ask_area": "💬 Soru-Cevap Alanı",
-        "ready_questions": [
-            "Kalp krizi riskini azaltmak için nelere dikkat etmeliyim?",
-            "Kalp hastaları için önerilen egzersizler nelerdir?",
-            "Hipertansiyonlu bir hastanın beslenmesinde nelere dikkat edilmelidir?"
-        ]
-    },
-    "English": {
-        "question_placeholder": "Type your question...",
-        "ask_button": "Ask",
-        "a": "Answer",
-        "ask_area": "💬 Q&A Area",
-        "ready_questions": [
-            "What should I do to reduce the risk of a heart attack?",
-            "What exercises are recommended for people with heart disease?",
-            "What should hypertensive patients pay attention to in their diet?"
-        ]
-    }
-}[lang]
-
-st.set_page_config(page_title="HeartHelper", page_icon="hearthelper_logo.png", layout="wide")
-
-# === Gemini Ayarı ===
-GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
-genai.configure(api_key=GEMINI_API_KEY)
-g_model = genai.GenerativeModel("models/gemini-1.5-pro")
-
-@st.cache_resource(show_spinner="Yükleniyor... / Loading...")
-def load_faiss_and_chunks(index_path="faiss_index.index", chunk_path="faiss_index_chunks.pkl"):
-    index = faiss.read_index(index_path)
-    with open(chunk_path, "rb") as f:
-        chunks = pickle.load(f)
-    return index, chunks
-
-@st.cache_resource(show_spinner="Model yükleniyor... / Loading model...")
-def load_embed_model():
-    return SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
-
-def get_relevant_chunks(question, embed_model, index, chunks, top_k=3):
-    q_vec = embed_model.encode([question])
-    D, I = index.search(np.array(q_vec).astype("float32"), top_k)
-    return [chunks[i] for i in I[0]]
-
-def generate_gemini_answer(question, context_chunks, language):
-    if language == "Türkçe":
-        prompt = f"""Aşağıdaki metinleri kullanarak kalp ve damar sağlığıyla ilgili gelen soruya bilimsel, anlaşılır ve güvenilir bir cevap ver:\nBağlam:\n{chr(10).join(context_chunks)}\nSoru: {question}\nCevap:"""
-    else:
-        prompt = f"""Using the texts below, answer the user's question about cardiovascular health in a scientific, clear, and trustworthy way.\nContext:\n{chr(10).join(context_chunks)}\nQuestion: {question}\nAnswer:"""
-    response = g_model.generate_content(prompt)
-    return response.text
-
-# === ANA Q&A PANELİ ===
-st.markdown(f"<h1 style='font-size:2.4em; color:#60a5fa; font-weight:bold;'>🫀 HeartHelper Assistant</h1>", unsafe_allow_html=True)
-
-st.markdown(f"#### {TXT['ask_area']}")
-
-# Ön tanımlı sorular: (preset butonları)
-preset_col1, preset_col2, preset_col3 = st.columns(3)
-for i, q in enumerate(TXT["ready_questions"]):
-    with [preset_col1, preset_col2, preset_col3][i % 3]:
-        if st.button(q, key=f"preset{i}", help="Bu soruyu otomatik doldur."):
-            st.session_state["inputq"] = q
-
-# Soru inputu
-question = st.text_input(TXT["question_placeholder"], key="inputq")
-
-if st.button(TXT["ask_button"], use_container_width=True):
-    if question.strip():
-        with st.spinner("Cevap hazırlanıyor..." if lang == "Türkçe" else "Generating answer..."):
-            index, chunks = load_faiss_and_chunks()
-            embed_model = load_embed_model()
-            context_chunks = get_relevant_chunks(question, embed_model, index, chunks)
-            answer = generate_gemini_answer(question, context_chunks, lang)
-        st.markdown(f"<div class='chat-bubble-a'><b>{TXT['a']}:</b> {answer}</div>", unsafe_allow_html=True)
-        
-# === Dil Seçimi ve Metinler === #
 TXT = {
     "Türkçe": {
         "app_title": "HeartHelper",
@@ -124,8 +45,8 @@ TXT = {
             "Kalp hastaları için önerilen egzersizler nelerdir?",
             "Hipertansiyonlu bir hastanın beslenmesinde nelere dikkat edilmelidir?"
         ],
-        "suggestion_card": "💡 Sağlık Önerisi: Düzenli olarak tansiyonunuzu ve kolesterolünüzü kontrol ettirin.", 
-                "sidebar_login": "Kullanıcı Girişi",
+        "suggestion_card": "💡 Sağlık Önerisi: Düzenli olarak tansiyonunuzu ve kolesterolünüzü kontrol ettirin.",
+        "sidebar_login": "Kullanıcı Girişi",
         "sidebar_enter_id": "ID'nizi girin (veya boş bırakın, yeni oluşturulsun):",
         "sidebar_your_id": "Kullanıcı ID'niz:",
         "sidebar_daily_record": "Günlük Sağlık Kaydı",
@@ -135,7 +56,6 @@ TXT = {
         "sidebar_save": "Kaydet",
         "sidebar_record_saved": "Günlük kayıt eklendi!"
     },
-    
     "English": {
         "app_title": "HeartHelper",
         "panel_header": "AI-Powered Cardiovascular Health Assistant",
@@ -167,8 +87,8 @@ TXT = {
             "What exercises are recommended for people with heart disease?",
             "What should hypertensive patients pay attention to in their diet?"
         ],
-        "suggestion_card": "💡 Health Tip: Remember to check your blood pressure and cholesterol regularly.", 
-         "sidebar_login": "User Login",
+        "suggestion_card": "💡 Health Tip: Remember to check your blood pressure and cholesterol regularly.",
+        "sidebar_login": "User Login",
         "sidebar_enter_id": "Enter your ID (or leave blank to generate):",
         "sidebar_your_id": "Your User ID:",
         "sidebar_daily_record": "Daily Health Record",
@@ -179,6 +99,35 @@ TXT = {
         "sidebar_record_saved": "Record saved!"
     }
 }[lang]
+
+# --- Gemini Ayarı ---
+GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
+genai.configure(api_key=GEMINI_API_KEY)
+g_model = genai.GenerativeModel("models/gemini-1.5-pro")
+
+@st.cache_resource(show_spinner="Yükleniyor... / Loading...")
+def load_faiss_and_chunks(index_path="faiss_index.index", chunk_path="faiss_index_chunks.pkl"):
+    index = faiss.read_index(index_path)
+    with open(chunk_path, "rb") as f:
+        chunks = pickle.load(f)
+    return index, chunks
+
+@st.cache_resource(show_spinner="Model yükleniyor... / Loading model...")
+def load_embed_model():
+    return SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
+
+def get_relevant_chunks(question, embed_model, index, chunks, top_k=3):
+    q_vec = embed_model.encode([question])
+    D, I = index.search(np.array(q_vec).astype("float32"), top_k)
+    return [chunks[i] for i in I[0]]
+
+def generate_gemini_answer(question, context_chunks, language):
+    if language == "Türkçe":
+        prompt = f"""Aşağıdaki metinleri kullanarak kalp ve damar sağlığıyla ilgili gelen soruya bilimsel, anlaşılır ve güvenilir bir cevap ver:\nBağlam:\n{chr(10).join(context_chunks)}\nSoru: {question}\nCevap:"""
+    else:
+        prompt = f"""Using the texts below, answer the user's question about cardiovascular health in a scientific, clear, and trustworthy way.\nContext:\n{chr(10).join(context_chunks)}\nQuestion: {question}\nAnswer:"""
+    response = g_model.generate_content(prompt)
+    return response.text
 
 # === Kullanıcı Girişi / ID Sistemi ===
 def get_or_create_user_id():
@@ -201,13 +150,8 @@ def get_or_create_user_id():
 user_id = get_or_create_user_id()
 
 # === Sağlık Kayıtları ===
-import os
-
-# 1. Kayıt klasörü
 records_dir = "user_records"
 os.makedirs(records_dir, exist_ok=True)
-
-# 2. Dosya yolu
 datafile = os.path.join(records_dir, f"{user_id}_records.csv")
 
 def load_user_data():
@@ -278,15 +222,22 @@ with colA:
     preset_col1, preset_col2, preset_col3 = st.columns(3)
     for i, q in enumerate(TXT["ready_questions"]):
         with [preset_col1, preset_col2, preset_col3][i % 3]:
-            if st.button(q, key=f"preset{i}", help="Bu soruyu otomatik doldur."):
+            # Key'ler benzersiz!
+            if st.button(q, key=f"preset_button_{i}", help="Bu soruyu otomatik doldur."):
                 st.session_state["inputq"] = q
 
     question = st.text_input(TXT["question_placeholder"], key="inputq")
     if st.button(TXT["ask_button"], use_container_width=True):
         if question.strip():
-            answer = "Cevabınız buraya gelecek! / Your answer will appear here!"  # (Buraya Gemini fonksiyonlarını bağlayabilirsin.)
+            # Gemini ile cevap oluştur!
+            with st.spinner("Cevap hazırlanıyor..." if lang == "Türkçe" else "Generating answer..."):
+                index, chunks = load_faiss_and_chunks()
+                embed_model = load_embed_model()
+                context_chunks = get_relevant_chunks(question, embed_model, index, chunks)
+                answer = generate_gemini_answer(question, context_chunks, lang)
             st.session_state.history.append({"soru": question, "cevap": answer})
 
+    # Geçmiş Soru-Cevaplar
     for qa in reversed(st.session_state.history):
         st.markdown(f"<div class='chat-bubble-q'><b>{TXT['q']}:</b> {qa['soru']}</div>", unsafe_allow_html=True)
         st.markdown(f"<div class='chat-bubble-a'><b>{TXT['a']}:</b> {qa['cevap']}</div>", unsafe_allow_html=True)
@@ -308,14 +259,13 @@ with colA:
             st.success("Geri bildiriminiz kaydedildi, teşekkürler!")
 
 with colB:
-    # Logo, sağ üstte ve ortalı olarak ekleniyor
     col1, col2, col3 = st.columns([1, 2, 1])
-with col2:
-    st.image("hearthelper_logo.png", width=250, caption="HeartHelper", use_container_width=False)
-    st.markdown(f"<div class='desc-card'><b>{TXT['profile_card']}</b><br>"
-        f"{TXT['age']}: <b>{age}</b><br>{TXT['gender']}: <b>{gender}</b><br>{TXT['disease']}: <b>{disease}</b></div>", unsafe_allow_html=True)
-    st.markdown(f"<div class='desc-card'>{TXT['about']}</div>", unsafe_allow_html=True)
-    st.markdown(f"<div class='desc-card' style='color:#facc15;'>{TXT['kvkk']}</div>", unsafe_allow_html=True)
+    with col2:
+        st.image("hearthelper_logo.png", width=250, caption="HeartHelper", use_container_width=False)
+        st.markdown(f"<div class='desc-card'><b>{TXT['profile_card']}</b><br>"
+            f"{TXT['age']}: <b>{age}</b><br>{TXT['gender']}: <b>{gender}</b><br>{TXT['disease']}: <b>{disease}</b></div>", unsafe_allow_html=True)
+        st.markdown(f"<div class='desc-card'>{TXT['about']}</div>", unsafe_allow_html=True)
+        st.markdown(f"<div class='desc-card' style='color:#facc15;'>{TXT['kvkk']}</div>", unsafe_allow_html=True)
 
 # --- Footer --- #
 st.markdown(
