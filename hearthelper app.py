@@ -10,23 +10,6 @@ import google.generativeai as genai
 
 st.set_page_config(page_title="HeartHelper", page_icon="hearthelper_logo.png", layout="wide")
 
-# === Dil Seçimi ve Metinler === #
-lang = st.sidebar.selectbox("Select Language / Dil Seçiniz", ["Türkçe", "English"])
-TXT = {
-    "Türkçe": {
-        "ask_button": "Sor",
-        "question_placeholder": "Sorunuzu yazınız...",
-        "a": "Cevap",
-        # ... diğer anahtarlar ...
-    },
-    "English": {
-        "ask_button": "Ask",
-        "question_placeholder": "Type your question...",
-        "a": "Answer",
-        # ... diğer anahtarlar ...
-    }
-}[lang]
-
 # === Gemini Ayarı ===
 GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
 genai.configure(api_key=GEMINI_API_KEY)
@@ -69,6 +52,7 @@ if st.button(TXT["ask_button"]):
         st.markdown(f"<div class='chat-bubble-a'><b>{TXT['a']}:</b> {answer}</div>", unsafe_allow_html=True)
         
 # === Dil Seçimi ve Metinler === #
+lang = st.sidebar.selectbox("Select Language / Dil Seçiniz", ["Türkçe", "English"])
 TXT = {
     "Türkçe": {
         "app_title": "HeartHelper",
