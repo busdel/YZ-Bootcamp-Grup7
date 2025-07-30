@@ -8,6 +8,34 @@ import faiss
 from sentence_transformers import SentenceTransformer
 import google.generativeai as genai
 
+# --- Dil Seçimi ve TXT sözlüğü ---
+lang = st.sidebar.selectbox("Select Language / Dil Seçiniz", ["Türkçe", "English"])
+
+TXT = {
+    "Türkçe": {
+        "question_placeholder": "Sorunuzu yazınız...",
+        "ask_button": "Sor",
+        "a": "Cevap",
+        "ask_area": "💬 Soru-Cevap Alanı",
+        "ready_questions": [
+            "Kalp krizi riskini azaltmak için nelere dikkat etmeliyim?",
+            "Kalp hastaları için önerilen egzersizler nelerdir?",
+            "Hipertansiyonlu bir hastanın beslenmesinde nelere dikkat edilmelidir?"
+        ]
+    },
+    "English": {
+        "question_placeholder": "Type your question...",
+        "ask_button": "Ask",
+        "a": "Answer",
+        "ask_area": "💬 Q&A Area",
+        "ready_questions": [
+            "What should I do to reduce the risk of a heart attack?",
+            "What exercises are recommended for people with heart disease?",
+            "What should hypertensive patients pay attention to in their diet?"
+        ]
+    }
+}[lang]
+
 st.set_page_config(page_title="HeartHelper", page_icon="hearthelper_logo.png", layout="wide")
 
 # === Gemini Ayarı ===
@@ -39,10 +67,22 @@ def generate_gemini_answer(question, context_chunks, language):
     response = g_model.generate_content(prompt)
     return response.text
 
-# === SORU GİRİŞİ VE SOHBET ===
-st.title("🫀 HeartHelper Assistant")
-question = st.text_input(TXT["question_placeholder"])
-if st.button(TXT["ask_button"]):
+# === ANA Q&A PANELİ ===
+st.markdown(f"<h1 style='font-size:2.4em; color:#60a5fa; font-weight:bold;'>🫀 HeartHelper Assistant</h1>", unsafe_allow_html=True)
+
+st.markdown(f"#### {TXT['ask_area']}")
+
+# Ön tanımlı sorular: (preset butonları)
+preset_col1, preset_col2, preset_col3 = st.columns(3)
+for i, q in enumerate(TXT["ready_questions"]):
+    with [preset_col1, preset_col2, preset_col3][i % 3]:
+        if st.button(q, key=f"preset{i}", help="Bu soruyu otomatik doldur."):
+            st.session_state["inputq"] = q
+
+# Soru inputu
+question = st.text_input(TXT["question_placeholder"], key="inputq")
+
+if st.button(TXT["ask_button"], use_container_width=True):
     if question.strip():
         with st.spinner("Cevap hazırlanıyor..." if lang == "Türkçe" else "Generating answer..."):
             index, chunks = load_faiss_and_chunks()
@@ -52,7 +92,6 @@ if st.button(TXT["ask_button"]):
         st.markdown(f"<div class='chat-bubble-a'><b>{TXT['a']}:</b> {answer}</div>", unsafe_allow_html=True)
         
 # === Dil Seçimi ve Metinler === #
-lang = st.sidebar.selectbox("Select Language / Dil Seçiniz", ["Türkçe", "English"])
 TXT = {
     "Türkçe": {
         "app_title": "HeartHelper",
