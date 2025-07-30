@@ -52,8 +52,18 @@ TXT = {
             "Kalp hastaları için önerilen egzersizler nelerdir?",
             "Hipertansiyonlu bir hastanın beslenmesinde nelere dikkat edilmelidir?"
         ],
-        "suggestion_card": "💡 Sağlık Önerisi: Düzenli olarak tansiyonunuzu ve kolesterolünüzü kontrol ettirin."
+        "suggestion_card": "💡 Sağlık Önerisi: Düzenli olarak tansiyonunuzu ve kolesterolünüzü kontrol ettirin.", 
+                "sidebar_login": "Kullanıcı Girişi",
+        "sidebar_enter_id": "ID'nizi girin (veya boş bırakın, yeni oluşturulsun):",
+        "sidebar_your_id": "Kullanıcı ID'niz:",
+        "sidebar_daily_record": "Günlük Sağlık Kaydı",
+        "sidebar_bp": "Tansiyon (örn: 120/80):",
+        "sidebar_exercise": "Egzersiz (örn: 30dk yürüyüş):",
+        "sidebar_medication": "İlaç (örn: Aspirin):",
+        "sidebar_save": "Kaydet",
+        "sidebar_record_saved": "Günlük kayıt eklendi!"
     },
+    
     "English": {
         "app_title": "HeartHelper",
         "panel_header": "AI-Powered Cardiovascular Health Assistant",
@@ -85,14 +95,23 @@ TXT = {
             "What exercises are recommended for people with heart disease?",
             "What should hypertensive patients pay attention to in their diet?"
         ],
-        "suggestion_card": "💡 Health Tip: Remember to check your blood pressure and cholesterol regularly."
+        "suggestion_card": "💡 Health Tip: Remember to check your blood pressure and cholesterol regularly.", 
+         "sidebar_login": "User Login",
+        "sidebar_enter_id": "Enter your ID (or leave blank to generate):",
+        "sidebar_your_id": "Your User ID:",
+        "sidebar_daily_record": "Daily Health Record",
+        "sidebar_bp": "Blood Pressure (e.g. 120/80):",
+        "sidebar_exercise": "Exercise (e.g. 30min walk):",
+        "sidebar_medication": "Medication (e.g. Aspirin):",
+        "sidebar_save": "Save",
+        "sidebar_record_saved": "Record saved!"
     }
 }[lang]
 
 # === Kullanıcı Girişi / ID Sistemi ===
 def get_or_create_user_id():
-    st.sidebar.markdown("#### Kullanıcı Girişi")
-    id_input = st.sidebar.text_input("ID'nizi girin (veya boş bırakın, yeni oluşturulsun):", "")
+    st.sidebar.markdown(f"#### {TXT['sidebar_login']}")
+    id_input = st.sidebar.text_input(TXT['sidebar_enter_id'], "")
     if id_input:
         user_id = id_input.strip()
         st.session_state["user_id"] = user_id
@@ -100,7 +119,11 @@ def get_or_create_user_id():
         if "user_id" not in st.session_state:
             st.session_state["user_id"] = str(uuid.uuid4())[:8]
         user_id = st.session_state["user_id"]
-    st.sidebar.markdown(f"<div style='color:#38bdf8;font-size:0.93em; text-align:center; margin-top:8px;'>Kullanıcı ID'niz:<br><b>{user_id}</b></div>", unsafe_allow_html=True)
+    st.sidebar.markdown(
+        f"<div style='color:#38bdf8;font-size:0.93em; text-align:center; margin-top:8px;'>"
+        f"{TXT['sidebar_your_id']}<br><b>{user_id}</b></div>",
+        unsafe_allow_html=True
+    )
     return user_id
 
 user_id = get_or_create_user_id()
@@ -127,12 +150,12 @@ def save_user_data(df):
 user_data = load_user_data()
 
 st.sidebar.markdown("---")
-st.sidebar.markdown("#### Günlük Sağlık Kaydı")
-bp = st.sidebar.text_input("Tansiyon / Blood Pressure (örn: 120/80):")
-ex = st.sidebar.text_input("Egzersiz / Exercise (örn: 30dk yürüyüş):")
-med = st.sidebar.text_input("İlaç / Medication (örn: Aspirin):")
+st.sidebar.markdown(f"#### {TXT['sidebar_daily_record']}")
+bp = st.sidebar.text_input(TXT['sidebar_bp'])
+ex = st.sidebar.text_input(TXT['sidebar_exercise'])
+med = st.sidebar.text_input(TXT['sidebar_medication'])
 
-if st.sidebar.button("Kaydet / Save"):
+if st.sidebar.button(TXT['sidebar_save']):
     new_row = {
         "Date": pd.Timestamp.now().strftime("%Y-%m-%d"),
         "BloodPressure": bp,
@@ -142,7 +165,7 @@ if st.sidebar.button("Kaydet / Save"):
     }
     user_data = pd.concat([user_data, pd.DataFrame([new_row])], ignore_index=True)
     save_user_data(user_data)
-    st.sidebar.success("Günlük kayıt eklendi! / Record saved!")
+    st.sidebar.success(TXT['sidebar_record_saved'])
 
 # === Profil Bilgileri ===
 st.sidebar.markdown("<hr>", unsafe_allow_html=True)
