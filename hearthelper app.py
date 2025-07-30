@@ -8,15 +8,30 @@ import faiss
 from sentence_transformers import SentenceTransformer
 import google.generativeai as genai
 
-# === API Key ve Model ===
+st.set_page_config(page_title="HeartHelper", page_icon="hearthelper_logo.png", layout="wide")
+
+# === Dil Seçimi ve Metinler === #
+lang = st.sidebar.selectbox("Select Language / Dil Seçiniz", ["Türkçe", "English"])
+TXT = {
+    "Türkçe": {
+        "ask_button": "Sor",
+        "question_placeholder": "Sorunuzu yazınız...",
+        "a": "Cevap",
+        # ... diğer anahtarlar ...
+    },
+    "English": {
+        "ask_button": "Ask",
+        "question_placeholder": "Type your question...",
+        "a": "Answer",
+        # ... diğer anahtarlar ...
+    }
+}[lang]
+
+# === Gemini Ayarı ===
 GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
 genai.configure(api_key=GEMINI_API_KEY)
 g_model = genai.GenerativeModel("models/gemini-1.5-pro")
 
-st.set_page_config(page_title="HeartHelper", page_icon="hearthelper_logo.png", layout="wide")  # LOGO burada da favicon olur
-
-# === SORU GİRİŞİ VE SOHBET ===
-# Model ve index yükleme
 @st.cache_resource(show_spinner="Yükleniyor... / Loading...")
 def load_faiss_and_chunks(index_path="faiss_index.index", chunk_path="faiss_index_chunks.pkl"):
     index = faiss.read_index(index_path)
@@ -35,37 +50,24 @@ def get_relevant_chunks(question, embed_model, index, chunks, top_k=3):
 
 def generate_gemini_answer(question, context_chunks, language):
     if language == "Türkçe":
-        prompt = f"""Aşağıdaki metinleri kullanarak kalp ve damar sağlığıyla ilgili gelen soruya bilimsel, anlaşılır ve güvenilir bir cevap ver:
-
-Bağlam:
-{chr(10).join(context_chunks)}
-
-Soru: {question}
-Cevap:"""
+        prompt = f"""Aşağıdaki metinleri kullanarak kalp ve damar sağlığıyla ilgili gelen soruya bilimsel, anlaşılır ve güvenilir bir cevap ver:\nBağlam:\n{chr(10).join(context_chunks)}\nSoru: {question}\nCevap:"""
     else:
-        prompt = f"""Using the texts below, answer the user's question about cardiovascular health in a scientific, clear, and trustworthy way.
-
-Context:
-{chr(10).join(context_chunks)}
-
-Question: {question}
-Answer:"""
+        prompt = f"""Using the texts below, answer the user's question about cardiovascular health in a scientific, clear, and trustworthy way.\nContext:\n{chr(10).join(context_chunks)}\nQuestion: {question}\nAnswer:"""
     response = g_model.generate_content(prompt)
     return response.text
 
-
-if st.button(ask_button, use_container_width=True):
+# === SORU GİRİŞİ VE SOHBET ===
+st.title("🫀 HeartHelper Assistant")
+question = st.text_input(TXT["question_placeholder"])
+if st.button(TXT["ask_button"]):
     if question.strip():
         with st.spinner("Cevap hazırlanıyor..." if lang == "Türkçe" else "Generating answer..."):
             index, chunks = load_faiss_and_chunks()
             embed_model = load_embed_model()
             context_chunks = get_relevant_chunks(question, embed_model, index, chunks)
             answer = generate_gemini_answer(question, context_chunks, lang)
-        st.markdown(
-            f"<div class='chat-bubble-a'><b>{TXT['a']}:</b> {answer}</div>",
-            unsafe_allow_html=True
-        )
-
+        st.markdown(f"<div class='chat-bubble-a'><b>{TXT['a']}:</b> {answer}</div>", unsafe_allow_html=True)
+        
 # === Dil Seçimi ve Metinler === #
 lang = st.sidebar.selectbox("Select Language / Dil Seçiniz", ["Türkçe", "English"])
 
