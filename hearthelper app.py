@@ -198,7 +198,7 @@ st.sidebar.markdown("<hr>", unsafe_allow_html=True)
 st.sidebar.info(TXT["suggestion_card"])
 
 # === ANA PANEL ===
-colA, colB = st.columns([1, 2])
+colA, colB = st.columns([2, 1])
 with colA:
     st.markdown("""
         <style>
