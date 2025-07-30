@@ -16,19 +16,6 @@ g_model = genai.GenerativeModel("models/gemini-1.5-pro")
 st.set_page_config(page_title="HeartHelper", page_icon="hearthelper_logo.png", layout="wide")  # LOGO burada da favicon olur
 
 # === SORU GİRİŞİ VE SOHBET ===
-question = st.text_input(
-    TXT["question_placeholder"],
-    "",
-    placeholder=(
-        "İlaç kullanımı, egzersiz, beslenme... Kalp sağlığınız için merak ettiklerinizi yazın." 
-        if lang=="Türkçe"
-        else "Ask anything about heart health, treatment, medication, exercise, or nutrition."
-    ),
-    key="inputq"
-)
-ask_button = TXT["ask_button"]
-
-
 # Model ve index yükleme
 @st.cache_resource(show_spinner="Yükleniyor... / Loading...")
 def load_faiss_and_chunks(index_path="faiss_index.index", chunk_path="faiss_index_chunks.pkl"):
