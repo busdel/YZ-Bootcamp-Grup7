@@ -54,7 +54,9 @@ TXT = {
         "sidebar_exercise": "Egzersiz (örn: 30dk yürüyüş):",
         "sidebar_medication": "İlaç (örn: Aspirin):",
         "sidebar_save": "Kaydet",
-        "sidebar_record_saved": "Günlük kayıt eklendi!"
+        "sidebar_record_saved": "Günlük kayıt eklendi!", 
+        "records_header": "📋 Günlük Sağlık Kayıtlarınız",
+        "records_empty": "Henüz hiç kayıt eklenmedi."
     },
     "English": {
         "app_title": "HeartHelper",
@@ -96,7 +98,9 @@ TXT = {
         "sidebar_exercise": "Exercise (e.g. 30min walk):",
         "sidebar_medication": "Medication (e.g. Aspirin):",
         "sidebar_save": "Save",
-        "sidebar_record_saved": "Record saved!"
+        "sidebar_record_saved": "Record saved!", 
+        "records_header": "📋 Your Daily Health Records",
+        "records_empty": "No records have been added yet."
     }
 }[lang]
 
@@ -242,11 +246,12 @@ with colA:
         st.markdown(f"<div class='chat-bubble-q'><b>{TXT['q']}:</b> {qa['soru']}</div>", unsafe_allow_html=True)
         st.markdown(f"<div class='chat-bubble-a'><b>{TXT['a']}:</b> {qa['cevap']}</div>", unsafe_allow_html=True)
 
-    st.markdown("#### 📋 Günlük Sağlık Kayıtlarınız / Your Daily Health Records")
-    if len(user_data):
-        st.dataframe(user_data[["Date", "BloodPressure", "Exercise", "Medication"]].sort_values("Date", ascending=False))
-    else:
-        st.info("Henüz hiç kayıt eklenmedi. / No records have been added yet.")
+    st.markdown(f"#### {TXT['records_header']}")
+if len(user_data):
+    st.dataframe(user_data[["Date", "BloodPressure", "Exercise", "Medication"]].sort_values("Date", ascending=False))
+else:
+    st.info(TXT["records_empty"])
+
 
     # Feedback Alanı
     st.markdown("---")
