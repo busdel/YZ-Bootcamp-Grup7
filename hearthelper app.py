@@ -223,7 +223,7 @@ with colA:
     if len(user_data):
         st.dataframe(user_data[["Date", "BloodPressure", "Exercise", "Medication"]].sort_values("Date", ascending=False))
     else:
-        st.info("Henüz hiç kayıt eklenmedi.")
+        st.info("Henüz hiç kayıt eklenmedi. / No records have been added yet.")
 
     # Feedback Alanı
     st.markdown("---")
