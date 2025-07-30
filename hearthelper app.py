@@ -219,7 +219,7 @@ with colA:
         st.markdown(f"<div class='chat-bubble-q'><b>{TXT['q']}:</b> {qa['soru']}</div>", unsafe_allow_html=True)
         st.markdown(f"<div class='chat-bubble-a'><b>{TXT['a']}:</b> {qa['cevap']}</div>", unsafe_allow_html=True)
 
-    st.markdown("#### 📋 Günlük Sağlık Kayıtlarınız")
+    st.markdown("#### 📋 Günlük Sağlık Kayıtlarınız / Your Daily Health Records")
     if len(user_data):
         st.dataframe(user_data[["Date", "BloodPressure", "Exercise", "Medication"]].sort_values("Date", ascending=False))
     else:
