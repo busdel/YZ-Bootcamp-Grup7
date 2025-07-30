@@ -128,6 +128,70 @@ def get_or_create_user_id():
 
 user_id = get_or_create_user_id()
 
+# === SORU GİRİŞİ VE SOHBET ===
+question = st.text_input(
+    "Sorunuzu yazın:" if lang=="Türkçe" else "Type your question:",
+    "",
+    placeholder=(
+        "İlaç kullanımı, egzersiz, beslenme... Kalp sağlığınız için merak ettiklerinizi yazın." 
+        if lang=="Türkçe"
+        else "Ask anything about heart health, treatment, medication, exercise, or nutrition."
+    )
+)
+ask_button = "Sor" if lang=="Türkçe" else "Ask"
+
+# === Gemini AI ve FAISS yükleme ===
+@st.cache_resource(show_spinner="Yükleniyor... / Loading...")
+def load_faiss_and_chunks(index_path="faiss_index.index", chunk_path="faiss_index_chunks.pkl"):
+    index = faiss.read_index(index_path)
+    with open(chunk_path, "rb") as f:
+        chunks = pickle.load(f)
+    return index, chunks
+
+@st.cache_resource(show_spinner="Model yükleniyor... / Loading model...")
+def load_embed_model():
+    return SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
+
+genai.configure(api_key=GEMINI_API_KEY)
+g_model = genai.GenerativeModel("models/gemini-1.5-pro") # kararlı model olduğu için bu tercih edildi. 
+
+def get_relevant_chunks(question, embed_model, index, chunks, top_k=3):
+    q_vec = embed_model.encode([question])
+    D, I = index.search(np.array(q_vec).astype("float32"), top_k)
+    return [chunks[i] for i in I[0]]
+
+def generate_gemini_answer(question, context_chunks, language):
+    if language == "Türkçe":
+        prompt = f"""Aşağıdaki metinleri kullanarak kalp ve damar sağlığıyla ilgili gelen soruya bilimsel, anlaşılır ve güvenilir bir cevap ver:
+
+Bağlam:
+{chr(10).join(context_chunks)}
+
+Soru: {question}
+Cevap:"""
+    else:
+        prompt = f"""Using the texts below, answer the user's question about cardiovascular health in a scientific, clear, and trustworthy way.
+
+Context:
+{chr(10).join(context_chunks)}
+
+Question: {question}
+Answer:"""
+    response = g_model.generate_content(prompt)
+    return response.text
+
+# === SOHBET VE CEVAP ===
+if st.button(ask_button):
+    with st.spinner("Cevap hazırlanıyor..." if lang=="Türkçe" else "Generating answer..."):
+        index, chunks = load_faiss_and_chunks()
+        embed_model = load_embed_model()
+        context_chunks = get_relevant_chunks(question, embed_model, index, chunks)
+        answer = generate_gemini_answer(question, context_chunks, lang)
+    st.markdown(
+        f"<div class='chat-box'><b>{'Cevap:' if lang=='Türkçe' else 'Answer:'}</b><br>{answer}</div>",
+        unsafe_allow_html=True
+    )
+
 # === Sağlık Kayıtları ===
 import os
 
