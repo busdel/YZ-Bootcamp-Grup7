@@ -69,8 +69,6 @@ if st.button(TXT["ask_button"]):
         st.markdown(f"<div class='chat-bubble-a'><b>{TXT['a']}:</b> {answer}</div>", unsafe_allow_html=True)
         
 # === Dil Seçimi ve Metinler === #
-lang = st.sidebar.selectbox("Select Language / Dil Seçiniz", ["Türkçe", "English"])
-
 TXT = {
     "Türkçe": {
         "app_title": "HeartHelper",
