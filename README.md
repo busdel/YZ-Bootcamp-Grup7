@@ -82,6 +82,9 @@ Modüler ve ölçeklenebilir altyapısıyla, ilerleyen aşamalarda diyabet, KOAH
 
 
 ---
+## 📎 Kullanıcılar İçin Link
+
+[🔗 HeartHelper Uygulamasını Başlatmak için Tıklayın](https://yz-bootcamp-grup7-ki5a3bd94vw6wxqvhb83dk.streamlit.app/)
 
 # Sprint 1 
 - Sprint içinde tamamlanması tahmin edilen puan: 35 Puan
