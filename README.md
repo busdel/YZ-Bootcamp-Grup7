@@ -1,72 +1,7 @@
 <p align="center">
-  <a href="#english">🇬🇧 English</a> •
-  <a href="#turkish">🇹🇷 Türkçe</a>
+  <a href="#turkish">🇹🇷 Türkçe</a> •
+  <a href="#english">🇬🇧 English</a>
 </p>
-
----
-
-## <a name="english"></a>🇬🇧 English Version
-
-# ❤️ HeartHelper – AI-Powered Cardiovascular Health Assistant
-
-**YZ Bootcamp – Google Artificial Intelligence and Technology Academy / Team 7**  
-**Team Name:** Group-7  
-
----
-
-### 👥 Team Members  
-- **Neslişah Ebral Durdu** – Scrum Master  
-- **Sıla Carus** – Product Owner  
-- **Büşranur Delice** – Developer  
-- **Ozan İnaltekin** – Developer  
-- **Yavuz Selim Özdemir** – Developer  
-
----
-
-### 🌐 Project Overview  
-
-**HeartHelper** is an AI-powered digital health assistant designed to help individuals manage cardiovascular diseases in a more **effective, informed, and personalized** manner.  
-
-Developed as a bilingual web-based application (available in both **Turkish and English**), HeartHelper provides quick, accurate, and accessible medical guidance on medication use, exercise plans, and nutrition — based on up-to-date clinical guidelines.  
-
-Using **retrieval-augmented generation (RAG)** technology, the assistant delivers instant answers to users’ questions via a chat interface, ensuring responses are backed by **reliable medical sources**.
-
-With its **text-based and user-friendly interface**, HeartHelper is tailored for users of all digital literacy levels, from young adults to older individuals.
-
----
-
-### 🔗 Live Demo  
-
-👉 [Click to try the app](https://yz-bootcamp-grup7-ki5a3bd94vw6wxqvhb83dk.streamlit.app/)
-
----
-
-### ✨ Key Features  
-
-- **🤖 AI-Powered Q&A System:** Get instant, reliable answers using RAG technology.  
-- **📚 Verified & Up-to-Date Content:** Based on guidelines from authorities like the Ministry of Health and medical societies.  
-- **🧬 Personalized Recommendations:** Customized suggestions for exercise, diet, and medications.  
-- **🖥️ Accessible Interface:** Designed for all users, including those with limited digital literacy.  
-- **⏱️ 24/7 Support:** Continuous assistance and health reminders.  
-- **🔄 Scalable Architecture:** Easily adaptable to other chronic diseases (e.g., diabetes, COPD, hypertension).  
-- **🔐 Data Security:** Fully compliant with GDPR and KVKK standards.
-
----
-
-### 🎯 Target Audience  
-
-- Adults (18+) living with cardiovascular diseases  
-- Individuals managing chronic conditions  
-- Caregivers and family members  
-- Users with limited access to healthcare professionals  
-- Patients interested in digital health tools  
-- Institutions (hospitals, NGOs, public agencies) seeking collaboration  
-
----
-
-### 📌 Notes  
-
-HeartHelper is a **social innovation project** aimed at improving public health literacy through the power of AI. With its scalable infrastructure and bilingual design, it serves as a model for inclusive, accessible, and medically sound digital healthcare solutions.
 
 ---
 
@@ -132,6 +67,71 @@ Hem **Türkçe hem de İngilizce** olarak geliştirilen bu web tabanlı uygulama
 ### 📌 Notlar  
 
 HeartHelper, **yapay zekâ gücüyle toplumsal sağlık okuryazarlığını artırmayı hedefleyen sosyal bir inovasyon projesidir**. Ölçeklenebilir yapısı ve iki dilli tasarımıyla, erişilebilir ve güvenilir dijital sağlık çözümleri için örnek bir modeldir.
+
+---
+
+## <a name="english"></a>🇬🇧 English Version
+
+# ❤️ HeartHelper – AI-Powered Cardiovascular Health Assistant
+
+**YZ Bootcamp – Google Artificial Intelligence and Technology Academy / Team 7**  
+**Team Name:** Group-7  
+
+---
+
+### 👥 Team Members  
+- **Neslişah Ebral Durdu** – Scrum Master  
+- **Sıla Carus** – Product Owner  
+- **Büşranur Delice** – Developer  
+- **Ozan İnaltekin** – Developer  
+- **Yavuz Selim Özdemir** – Developer  
+
+---
+
+### 🌐 Project Overview  
+
+**HeartHelper** is an AI-powered digital health assistant designed to help individuals manage cardiovascular diseases in a more **effective, informed, and personalized** manner.  
+
+Developed as a bilingual web-based application (available in both **Turkish and English**), HeartHelper provides quick, accurate, and accessible medical guidance on medication use, exercise plans, and nutrition — based on up-to-date clinical guidelines.  
+
+Using **retrieval-augmented generation (RAG)** technology, the assistant delivers instant answers to users’ questions via a chat interface, ensuring responses are backed by **reliable medical sources**.
+
+With its **text-based and user-friendly interface**, HeartHelper is tailored for users of all digital literacy levels, from young adults to older individuals.
+
+---
+
+### 🔗 Live Demo  
+
+👉 [Click to try the app](https://yz-bootcamp-grup7-ki5a3bd94vw6wxqvhb83dk.streamlit.app/)
+
+---
+
+### ✨ Key Features  
+
+- **🤖 AI-Powered Q&A System:** Get instant, reliable answers using RAG technology.  
+- **📚 Verified & Up-to-Date Content:** Based on guidelines from authorities like the Ministry of Health and medical societies.  
+- **🧬 Personalized Recommendations:** Customized suggestions for exercise, diet, and medications.  
+- **🖥️ Accessible Interface:** Designed for all users, including those with limited digital literacy.  
+- **⏱️ 24/7 Support:** Continuous assistance and health reminders.  
+- **🔄 Scalable Architecture:** Easily adaptable to other chronic diseases (e.g., diabetes, COPD, hypertension).  
+- **🔐 Data Security:** Fully compliant with GDPR and KVKK standards.
+
+---
+
+### 🎯 Target Audience  
+
+- Adults (18+) living with cardiovascular diseases  
+- Individuals managing chronic conditions  
+- Caregivers and family members  
+- Users with limited access to healthcare professionals  
+- Patients interested in digital health tools  
+- Institutions (hospitals, NGOs, public agencies) seeking collaboration  
+
+---
+
+### 📌 Notes  
+
+HeartHelper is a **social innovation project** aimed at improving public health literacy through the power of AI. With its scalable infrastructure and bilingual design, it serves as a model for inclusive, accessible, and medically sound digital healthcare solutions.
 
 ---
 
