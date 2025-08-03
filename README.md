@@ -70,6 +70,11 @@ HeartHelper, **yapay zekâ gücüyle toplumsal sağlık okuryazarlığını art�
 
 ---
 
+## Product Backlog URL  
+[Trello Board - Sprint 1](https://trello.com/b/4gxOOOXD/hearthelper-sprint-1)
+
+---
+
 <details>
   <summary>English Version</summary>
 
@@ -135,11 +140,6 @@ With its **text-based and user-friendly interface**, HeartHelper is tailored for
 ### 📌 Notes  
 
 HeartHelper is a **social innovation project** aimed at improving public health literacy through the power of AI. With its scalable infrastructure and bilingual design, it serves as a model for inclusive, accessible, and medically sound digital healthcare solutions.
-
----
-
-## Product Backlog URL  
-[Trello Board - Sprint 1](https://trello.com/b/4gxOOOXD/hearthelper-sprint-1)
 
 
 ---
