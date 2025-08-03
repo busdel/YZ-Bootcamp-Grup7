@@ -1,104 +1,137 @@
-# YZ-Bootcamp-Grup7
-
-**Google Yapay Zeka ve Teknoloji Akademisi – Mezuniyet Bootcamp / Grup 7**
-
----
-
-## Takım İsmi  
-**Grup-7**
+<p align="center">
+  <a href="#english">🇬🇧 English</a> •
+  <a href="#turkish">🇹🇷 Türkçe</a>
+</p>
 
 ---
 
-### Takım Elemanları  
-- **Neslişah Ebral Durdu**: Scrum Master  
-- **Sıla Carus**: Product Owner  
-- **Büşranur Delice**: Developer  
-- **Ozan İnaltekin**: Developer  
-- **Yavuz Selim Özdemir**: Developer  
+## <a name="english"></a>🇬🇧 English Version
+
+# ❤️ HeartHelper – AI-Powered Cardiovascular Health Assistant
+
+**YZ Bootcamp – Google Artificial Intelligence and Technology Academy / Team 7**  
+**Team Name:** Group-7  
 
 ---
 
-## Ürün İsmi  
-**HEARTHELPER**
+### 👥 Team Members  
+- **Neslişah Ebral Durdu** – Scrum Master  
+- **Sıla Carus** – Product Owner  
+- **Büşranur Delice** – Developer  
+- **Ozan İnaltekin** – Developer  
+- **Yavuz Selim Özdemir** – Developer  
 
 ---
 
-Proje Tanımı
-HeartHelper, kalp ve damar hastalıklarıyla yaşayan bireylerin tedavi süreçlerini daha etkili, bilinçli ve kişiselleştirilmiş bir şekilde yönetmelerine yardımcı olmak amacıyla geliştirilmiş, yapay zekâ destekli dijital bir sağlık asistanıdır.
-Bu web tabanlı uygulama; ilaç kullanımı, egzersiz planı ve beslenme düzeni gibi kritik sağlık konularında güncel, doğru ve kişiye özel bilgi sunar.
+### 🌐 Project Overview  
+
+**HeartHelper** is an AI-powered digital health assistant designed to help individuals manage cardiovascular diseases in a more **effective, informed, and personalized** manner.  
+
+Developed as a bilingual web-based application (available in both **Turkish and English**), HeartHelper provides quick, accurate, and accessible medical guidance on medication use, exercise plans, and nutrition — based on up-to-date clinical guidelines.  
+
+Using **retrieval-augmented generation (RAG)** technology, the assistant delivers instant answers to users’ questions via a chat interface, ensuring responses are backed by **reliable medical sources**.
+
+With its **text-based and user-friendly interface**, HeartHelper is tailored for users of all digital literacy levels, from young adults to older individuals.
 
 ---
 
-## 📎 Kullanıcılar İçin Link
+### 🔗 Live Demo  
 
-[🔗 HeartHelper Uygulamasını Başlatmak için Tıklayın](https://yz-bootcamp-grup7-ki5a3bd94vw6wxqvhb83dk.streamlit.app/)
-
----
-
-## Ürün Açıklaması  
-**HeartHelper**, kalp ve damar hastalıklarıyla yaşayan bireylerin tedavi süreçlerini daha etkili, bilinçli ve kişiselleştirilmiş bir şekilde yönetmelerini sağlamak amacıyla geliştirilen yapay zeka destekli bir dijital sağlık asistanıdır.  
-
-Bu web tabanlı uygulama, hastaların ilaç kullanımı, egzersiz planı ve beslenme düzeni gibi kritik konularda doğru ve anlaşılır bilgiye anında erişmesini mümkün kılar. Sağlık Bakanlığı ve yetkin medikal otoritelerin yayınladığı güncel rehberlerden beslenen güvenilir bilgi altyapısıyla HeartHelper, bilgi kirliliğini önler ve kullanıcıya sade, doğru ve kişiye özel içerik sunar.  
-
-Gelişmiş retrieval-augmented yapay zekâ teknolojisi sayesinde kullanıcılar, tedavi süreçleriyle ilgili akıllarına takılan tüm soruları sohbet üzerinden sorabilir ve saniyeler içinde bilimsel kaynaklarla desteklenmiş yanıtlar alabilir.  
-
-Özellikle ileri yaş grubundaki bireylerin kolaylıkla kullanabileceği şekilde tasarlanan sade ve metin tabanlı arayüzüyle bu dijital asistan, hasta-dostu bir deneyim sunar.  
-
-HeartHelper yalnızca bilgi sunmakla kalmaz, aynı zamanda hastaların tedaviye uyumunu artırır, sağlık süreçlerinde güven duygusunu güçlendirir ve bireylerin kendi sağlıklarını daha bilinçli yönetmelerine destek olur.  
-
-Modüler ve ölçeklenebilir altyapısıyla, ilerleyen aşamalarda diyabet, KOAH ve hipertansiyon gibi diğer kronik hastalıklara da uyarlanabilir yapıda tasarlanmıştır.
+👉 [Click to try the app](https://yz-bootcamp-grup7-ki5a3bd94vw6wxqvhb83dk.streamlit.app/)
 
 ---
 
-## Ürün Özellikleri  
+### ✨ Key Features  
 
-🤖 Yapay Zekâ Destekli Soru-Cevap Sistemi
-Retrieval-augmented (bilgi geri çağırmalı) teknoloji ile çalışır.
-Kullanıcılar sağlıkla ilgili sorularını sohbet ekranına yazar.
-Yanıtlar bilimsel kaynaklara dayalıdır ve anında sunulur.
-
-📚 Güvenilir ve Güncel Bilgi Altyapısı
-Sağlık Bakanlığı, Türk Kardiyoloji Derneği gibi kurumların rehberleri temel alınır.
-Bilgi kirliliğinin önüne geçilerek sade, doğru ve kaynak gösterilen içerikler sağlanır.
-
-🧠 Kişiselleştirilmiş Öneri Sistemi
-Yaş, cinsiyet, hastalık tipi, ilaç kullanımı gibi bireysel veriler doğrultusunda kişiye özel egzersiz, diyet ve ilaç önerileri sunar.
-
-🖥️ Erişilebilir ve Kullanıcı Dostu Arayüz
-Basit, metin tabanlı ve görsel karmaşadan uzak tasarım.
-Özellikle ileri yaş bireylerin rahat kullanabilmesi hedeflenmiştir.
-
-⏱️ Sürekli Destek ve Hatırlatmalar
-7/24 erişilebilen dijital asistan deneyimi.
-Acil durum bilgilendirmeleri, günlük hatırlatmalar ve yönlendirmeler içerir.
-
-🔄 Ölçeklenebilir Yapı
-Kalp-damar hastalıklarının ötesine geçerek; diyabet, KOAH, hipertansiyon gibi kronik hastalıklar için de kolayca uyarlanabilir.
-
-🔐 Veri Güvenliği ve Gizlilik
-Tüm kullanıcı verileri KVKK ve GDPR standartlarına uygun şekilde işlenir ve korunur.
+- **🤖 AI-Powered Q&A System:** Get instant, reliable answers using RAG technology.  
+- **📚 Verified & Up-to-Date Content:** Based on guidelines from authorities like the Ministry of Health and medical societies.  
+- **🧬 Personalized Recommendations:** Customized suggestions for exercise, diet, and medications.  
+- **🖥️ Accessible Interface:** Designed for all users, including those with limited digital literacy.  
+- **⏱️ 24/7 Support:** Continuous assistance and health reminders.  
+- **🔄 Scalable Architecture:** Easily adaptable to other chronic diseases (e.g., diabetes, COPD, hypertension).  
+- **🔐 Data Security:** Fully compliant with GDPR and KVKK standards.
 
 ---
 
-🎯 Hedef Kitle
+### 🎯 Target Audience  
 
--Kalp ve damar hastalığı olan tüm yetişkin bireyler (18 yaş ve üzeri)
-
--Kronik hastalıklarla yaşayan genç, orta yaşlı ve yaşlı yetişkinler
-
--Hasta yakınları ve bakıcılar
-
--Sağlık profesyonelleriyle sınırlı iletişim kurabilen bireyler
-
--Dijital sağlık çözümlerine ilgi duyan kullanıcılar
-
--Sağlık kurumlarıyla iş birliği yapmak isteyen kuruluşlar (hastaneler, ASM’ler, sağlık STK’ları, kamu kurumları)
+- Adults (18+) living with cardiovascular diseases  
+- Individuals managing chronic conditions  
+- Caregivers and family members  
+- Users with limited access to healthcare professionals  
+- Patients interested in digital health tools  
+- Institutions (hospitals, NGOs, public agencies) seeking collaboration  
 
 ---
 
-📌 Not
+### 📌 Notes  
 
-HeartHelper, kamu sağlığına katkı sunmayı amaçlayan bir sosyal inovasyon projesidir. Uzmanlık odaklı bilgi altyapısı ve kullanıcı dostu tasarımı sayesinde, kalp sağlığı konusunda farkındalık yaratmayı ve dijital sağlık çözümlerinin erişilebilirliğini artırmayı hedeflemektedir.
+HeartHelper is a **social innovation project** aimed at improving public health literacy through the power of AI. With its scalable infrastructure and bilingual design, it serves as a model for inclusive, accessible, and medically sound digital healthcare solutions.
+
+---
+
+## <a name="turkish"></a>🇹🇷 Türkçe Versiyonu
+
+# ❤️ HeartHelper – Yapay Zekâ Destekli Kalp Sağlığı Asistanı
+
+**Google Yapay Zeka ve Teknoloji Akademisi – Mezuniyet Bootcamp / Grup 7**  
+**Takım İsmi:** Grup-7  
+
+---
+
+### 👥 Takım Üyeleri  
+- **Neslişah Ebral Durdu** – Scrum Master  
+- **Sıla Carus** – Product Owner  
+- **Büşranur Delice** – Developer  
+- **Ozan İnaltekin** – Developer  
+- **Yavuz Selim Özdemir** – Developer  
+
+---
+
+### 🌐 Proje Tanımı  
+
+**HeartHelper**, kalp ve damar hastalıklarıyla yaşayan bireylerin tedavi süreçlerini daha **etkili, bilinçli ve kişiselleştirilmiş** şekilde yönetmelerine yardımcı olmak amacıyla geliştirilen yapay zekâ destekli dijital bir sağlık asistanıdır.  
+
+Hem **Türkçe hem de İngilizce** olarak geliştirilen bu web tabanlı uygulama, ilaç kullanımı, egzersiz planı ve beslenme gibi konularda güvenilir rehberlere dayalı, hızlı ve kişiye özel bilgi sunar.  
+
+**Retrieval-augmented generation (RAG)** teknolojisi ile çalışan sohbet ekranı sayesinde kullanıcılar sorularını yazabilir ve saniyeler içinde bilimsel kaynaklara dayanan yanıtlar alabilir.
+
+**Metin tabanlı ve kullanıcı dostu arayüzü**, düşük dijital okuryazarlığa sahip bireylerin bile kolayca kullanabilmesini sağlar.
+
+---
+
+### 🔗 Canlı Uygulama  
+
+👉 [Uygulamayı Deneyin](https://yz-bootcamp-grup7-ki5a3bd94vw6wxqvhb83dk.streamlit.app/)
+
+---
+
+### ✨ Temel Özellikler  
+
+- **🤖 Yapay Zekâ Destekli Soru-Cevap:** RAG teknolojisiyle güvenilir ve anlık yanıtlar.  
+- **📚 Güncel ve Doğrulanmış İçerik:** Sağlık Bakanlığı ve uzman kuruluşlara dayalı bilgi altyapısı.  
+- **🧬 Kişiselleştirilmiş Öneriler:** Kullanıcıya özel diyet, egzersiz ve ilaç bilgilendirmeleri.  
+- **🖥️ Erişilebilir Arayüz:** Dijital okuryazarlığı düşük bireyler için sade tasarım.  
+- **⏱️ 7/24 Destek:** Sağlık hatırlatıcıları ve acil durum yönlendirmeleri.  
+- **🔄 Ölçeklenebilir Mimari:** Diyabet, KOAH ve hipertansiyon gibi hastalıklara uyarlanabilir.  
+- **🔐 Veri Güvenliği:** KVKK ve GDPR uyumlu veri koruma.
+
+---
+
+### 🎯 Hedef Kitle  
+
+- 18 yaş ve üzeri kalp-damar hastalığı olan bireyler  
+- Kronik hastalığı olan genç, orta yaşlı ve yaşlı yetişkinler  
+- Hasta yakınları ve bakıcılar  
+- Sağlık profesyonelleriyle sınırlı iletişim kurabilen bireyler  
+- Dijital sağlık çözümlerine ilgi duyan kullanıcılar  
+- Sağlık kurumlarıyla iş birliği yapmak isteyen kuruluşlar (hastaneler, ASM’ler, STK’lar, kamu kurumları)
+
+---
+
+### 📌 Notlar  
+
+HeartHelper, **yapay zekâ gücüyle toplumsal sağlık okuryazarlığını artırmayı hedefleyen sosyal bir inovasyon projesidir**. Ölçeklenebilir yapısı ve iki dilli tasarımıyla, erişilebilir ve güvenilir dijital sağlık çözümleri için örnek bir modeldir.
 
 ---
 
