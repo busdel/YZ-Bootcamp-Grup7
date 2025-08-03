@@ -9,8 +9,6 @@
 
 ---
 
-## Ürün ile İlgili Bilgiler
-
 ### Takım Elemanları  
 - **Neslişah Ebral Durdu**: Scrum Master  
 - **Sıla Carus**: Product Owner  
@@ -22,6 +20,18 @@
 
 ## Ürün İsmi  
 **HEARTHELPER**
+
+---
+
+Proje Tanımı
+HeartHelper, kalp ve damar hastalıklarıyla yaşayan bireylerin tedavi süreçlerini daha etkili, bilinçli ve kişiselleştirilmiş bir şekilde yönetmelerine yardımcı olmak amacıyla geliştirilmiş, yapay zekâ destekli dijital bir sağlık asistanıdır.
+Bu web tabanlı uygulama; ilaç kullanımı, egzersiz planı ve beslenme düzeni gibi kritik sağlık konularında güncel, doğru ve kişiye özel bilgi sunar.
+
+---
+
+## 📎 Kullanıcılar İçin Link
+
+[🔗 HeartHelper Uygulamasını Başlatmak için Tıklayın](https://yz-bootcamp-grup7-ki5a3bd94vw6wxqvhb83dk.streamlit.app/)
 
 ---
 
@@ -42,38 +52,46 @@ Modüler ve ölçeklenebilir altyapısıyla, ilerleyen aşamalarda diyabet, KOAH
 
 ## Ürün Özellikleri  
 
-- **Yapay Zekâ Destekli Bilgi Erişimi**  
-  Kullanıcılar, sağlık durumlarıyla ilgili merak ettikleri her soruyu sohbet ekranına yazarak saniyeler içinde güvenilir ve anlaşılır yanıtlar alabilir. Sistem, retrieval-augmented (bilgi geri çağırmalı) teknoloji ile çalışır ve yanıtlarını bilimsel kaynaklara dayandırır.
+🤖 Yapay Zekâ Destekli Soru-Cevap Sistemi
+Retrieval-augmented (bilgi geri çağırmalı) teknoloji ile çalışır.
+Kullanıcılar sağlıkla ilgili sorularını sohbet ekranına yazar.
+Yanıtlar bilimsel kaynaklara dayalıdır ve anında sunulur.
 
-- **Güvenilir ve Güncel İçerik Altyapısı**  
-  Tüm bilgiler, Sağlık Bakanlığı, Türk Kardiyoloji Derneği gibi yetkili kurumlardan alınan güncel kılavuzlara dayanır. Bilgi kirliliğinin önüne geçilerek kullanıcıya sade, doğru ve kaynak gösterilen içerikler sunulur.
+📚 Güvenilir ve Güncel Bilgi Altyapısı
+Sağlık Bakanlığı, Türk Kardiyoloji Derneği gibi kurumların rehberleri temel alınır.
+Bilgi kirliliğinin önüne geçilerek sade, doğru ve kaynak gösterilen içerikler sağlanır.
 
-- **Kişiselleştirilmiş Öneri Sistemi**  
-  Kullanıcının yaş, cinsiyet, hastalık tipi, ilaç kullanımı, beslenme durumu gibi bireysel verileri doğrultusunda; özel egzersiz, diyet ve ilaç bilgilendirmeleri yapılır.
+🧠 Kişiselleştirilmiş Öneri Sistemi
+Yaş, cinsiyet, hastalık tipi, ilaç kullanımı gibi bireysel veriler doğrultusunda kişiye özel egzersiz, diyet ve ilaç önerileri sunar.
 
-- **Metin Tabanlı, Basit ve Erişilebilir Arayüz**  
-  Uygulama, özellikle yaşlı bireylerin ve dijital okuryazarlığı sınırlı kullanıcıların rahatlıkla kullanabileceği şekilde tasarlanmıştır. Görsel karmaşadan uzak, sade bir kullanıcı arayüzüne sahiptir.
+🖥️ Erişilebilir ve Kullanıcı Dostu Arayüz
+Basit, metin tabanlı ve görsel karmaşadan uzak tasarım.
+Özellikle ileri yaş bireylerin rahat kullanabilmesi hedeflenmiştir.
 
-- **Anlık ve Sürekli Destek Deneyimi**  
-  Uygulama, kullanıcıların günün her saatinde ulaşabileceği kesintisiz bir destek sunar. Acil durum bilgilendirmeleri, düzenli hatırlatmalar ve yönlendirici mesajlarla hasta bağlılığını artırır.
+⏱️ Sürekli Destek ve Hatırlatmalar
+7/24 erişilebilen dijital asistan deneyimi.
+Acil durum bilgilendirmeleri, günlük hatırlatmalar ve yönlendirmeler içerir.
 
-- **Ölçeklenebilir Sistem Yapısı**  
-  Kalp ve damar hastalıkları için geliştirilen bu sistem; aynı altyapıyla diyabet, KOAH, hipertansiyon gibi farklı kronik hastalıklar için kolayca uyarlanabilir.
+🔄 Ölçeklenebilir Yapı
+Kalp-damar hastalıklarının ötesine geçerek; diyabet, KOAH, hipertansiyon gibi kronik hastalıklar için de kolayca uyarlanabilir.
 
-- **Veri Güvenliği ve Gizlilik**  
-  Hasta verileri gizlilik esasına göre korunur. Tüm kullanıcı bilgileri, kişisel sağlık verilerini koruma yönetmeliğine (KVKK/GDPR) uygun olarak işlenir ve saklanır.
+🔐 Veri Güvenliği ve Gizlilik
+Tüm kullanıcı verileri KVKK ve GDPR standartlarına uygun şekilde işlenir ve korunur.
 
 ---
 
-## Hedef Kitle  
+🎯 Hedef Kitle
+Kalp ve damar hastalığı olan tüm yetişkin bireyler (18 yaş ve üzeri)
+Kronik hastalıklarla yaşayan genç, orta yaşlı ve yaşlı yetişkinler
+Hasta yakınları ve bakıcılar
+Sağlık profesyonelleriyle sınırlı iletişim kurabilen bireyler
+Dijital sağlık çözümlerine ilgi duyan kullanıcılar
+Sağlık kurumlarıyla iş birliği yapmak isteyen kuruluşlar (hastaneler, ASM’ler, sağlık STK’ları, kamu kurumları)
 
-- Kalp ve damar hastalığı olan bireyler  
-- Yaşlı kullanıcılar (65 yaş ve üzeri)  
-- Hasta yakınları ve bakıcılar  
-- Sağlık profesyonelleriyle iletişimi sınırlı bireyler  
-- Dijital çözümleri tercih eden hastalar  
-- Kronik hastalıkları olan genç ve orta yaşlı yetişkinler  
-- Sağlık kurumlarıyla iş birliği yapmak isteyen aktörler (hastaneler, ASM’ler, sağlık STK’ları, kamu kurumları)
+---
+
+📌 Not
+HeartHelper, kamu sağlığına katkı sunmayı amaçlayan bir sosyal inovasyon projesidir. Uzmanlık odaklı bilgi altyapısı ve kullanıcı dostu tasarımı sayesinde, kalp sağlığı konusunda farkındalık yaratmayı ve dijital sağlık çözümlerinin erişilebilirliğini artırmayı hedeflemektedir.
 
 ---
 
@@ -82,9 +100,6 @@ Modüler ve ölçeklenebilir altyapısıyla, ilerleyen aşamalarda diyabet, KOAH
 
 
 ---
-## 📎 Kullanıcılar İçin Link
-
-[🔗 HeartHelper Uygulamasını Başlatmak için Tıklayın](https://yz-bootcamp-grup7-ki5a3bd94vw6wxqvhb83dk.streamlit.app/)
 
 # Sprint 1 
 - Sprint içinde tamamlanması tahmin edilen puan: 35 Puan
