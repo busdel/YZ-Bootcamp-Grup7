@@ -142,6 +142,8 @@ With its **text-based and user-friendly interface**, HeartHelper is tailored for
 HeartHelper is a **social innovation project** aimed at improving public health literacy through the power of AI. With its scalable infrastructure and bilingual design, it serves as a model for inclusive, accessible, and medically sound digital healthcare solutions.
 
 
+</details>
+
 ---
 
 # Sprint 1 
