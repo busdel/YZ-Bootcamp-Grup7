@@ -407,6 +407,7 @@ HeartHelper is a **social innovation project** aimed at improving public health 
 <img width="1280" height="698" alt="image" src="https://github.com/user-attachments/assets/8a02c000-daf2-4d7a-b3f4-06242755969a" />
 <img width="1280" height="724" alt="image" src="https://github.com/user-attachments/assets/fd20acdb-77cd-4770-a616-8d9ab53569e9" />
 
+- Ürün Tanıtım Videomuz: https://www.youtube.com/watch?v=TaYxlalz2f4
 
 - Sprint Review:
 
