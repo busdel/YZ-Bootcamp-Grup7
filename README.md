@@ -7,7 +7,7 @@
 
 ## <a name="turkish"></a>🇹🇷 Türkçe Versiyonu
 
-# ❤️ HeartHelper – Yapay Zekâ Destekli Kalp Sağlığı Asistanı
+# 🫀 HeartHelper – Yapay Zekâ Destekli Kalp Sağlığı Asistanı
 
 **Google Yapay Zeka ve Teknoloji Akademisi – Mezuniyet Bootcamp / Grup 7**  
 **Takım İsmi:** Grup-7  
@@ -72,7 +72,7 @@ HeartHelper, **yapay zekâ gücüyle toplumsal sağlık okuryazarlığını art�
 
 ## <a name="english"></a>🇬🇧 English Version
 
-# ❤️ HeartHelper – AI-Powered Cardiovascular Health Assistant
+# 🫀 HeartHelper – AI-Powered Cardiovascular Health Assistant
 
 **YZ Bootcamp – Google Artificial Intelligence and Technology Academy / Team 7**  
 **Team Name:** Group-7  
