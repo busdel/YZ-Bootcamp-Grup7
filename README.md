@@ -81,16 +81,18 @@ Tüm kullanıcı verileri KVKK ve GDPR standartlarına uygun şekilde işlenir v
 ---
 
 🎯 Hedef Kitle
-Kalp ve damar hastalığı olan tüm yetişkin bireyler (18 yaş ve üzeri)
-Kronik hastalıklarla yaşayan genç, orta yaşlı ve yaşlı yetişkinler
-Hasta yakınları ve bakıcılar
-Sağlık profesyonelleriyle sınırlı iletişim kurabilen bireyler
-Dijital sağlık çözümlerine ilgi duyan kullanıcılar
-Sağlık kurumlarıyla iş birliği yapmak isteyen kuruluşlar (hastaneler, ASM’ler, sağlık STK’ları, kamu kurumları)
+
+-Kalp ve damar hastalığı olan tüm yetişkin bireyler (18 yaş ve üzeri)
+-Kronik hastalıklarla yaşayan genç, orta yaşlı ve yaşlı yetişkinler
+-Hasta yakınları ve bakıcılar
+-Sağlık profesyonelleriyle sınırlı iletişim kurabilen bireyler
+-Dijital sağlık çözümlerine ilgi duyan kullanıcılar
+-Sağlık kurumlarıyla iş birliği yapmak isteyen kuruluşlar (hastaneler, ASM’ler, sağlık STK’ları, kamu kurumları)
 
 ---
 
 📌 Not
+
 HeartHelper, kamu sağlığına katkı sunmayı amaçlayan bir sosyal inovasyon projesidir. Uzmanlık odaklı bilgi altyapısı ve kullanıcı dostu tasarımı sayesinde, kalp sağlığı konusunda farkındalık yaratmayı ve dijital sağlık çözümlerinin erişilebilirliğini artırmayı hedeflemektedir.
 
 ---
