@@ -70,6 +70,9 @@ HeartHelper, **yapay zekâ gücüyle toplumsal sağlık okuryazarlığını art�
 
 ---
 
+<details>
+  <summary>English Version</summary>
+
 ## <a name="english"></a>🇬🇧 English Version
 
 # 🫀 HeartHelper – AI-Powered Cardiovascular Health Assistant
